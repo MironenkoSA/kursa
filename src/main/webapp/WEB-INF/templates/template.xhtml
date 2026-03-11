@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><ui:insert name="title">Система региональных представителей</ui:insert></title>
+    <h:outputStylesheet library="css" name="style.css" />
+    <link rel="stylesheet" type="text/css" href="#{request.contextPath}/resources/css/style.css" />
+</h:head>
+<h:body>
+    <div id="header">
+        <h:form>
+            <p:menubar>
+                <p:menuitem value="Главная" outcome="index" icon="pi pi-home" />
+                <p:submenu label="Регионы" icon="pi pi-globe">
+                    <p:menuitem value="Список регионов" outcome="region" />
+                    <p:menuitem value="Добавить регион" outcome="region-edit" />
+                </p:submenu>
+                <p:submenu label="Офисы" icon="pi pi-building">
+                    <p:menuitem value="Список офисов" outcome="office" />
+                    <p:menuitem value="Добавить офис" outcome="office-edit" />
+                </p:submenu>
+                <p:submenu label="Представители" icon="pi pi-users">
+                    <p:menuitem value="Каталог представителей" outcome="representative" />
+                    <p:menuitem value="Добавить представителя" outcome="representative-edit" />
+                </p:submenu>
+                <p:submenu label="Отчеты" icon="pi pi-chart-line">
+                    <p:menuitem value="Сводка отчетов" outcome="report" />
+                    <p:menuitem value="Добавить отчет" outcome="report-edit" />
+                </p:submenu>
+                
+                <f:facet name="options">
+                    <h:panelGroup rendered="#{loginController.authenticated}">
+                        <span class="user-info">
+                            <i class="pi pi-user"></i> 
+                            Вы вошли как: <strong>#{loginController.username}</strong>
+                            <h:outputText styleClass="user-role admin" value="Администратор" rendered="#{loginController.admin}" />
+                            <h:outputText styleClass="user-role teacher" value="Преподаватель" rendered="#{loginController.teacher}" />
+                            <h:outputText styleClass="user-role student" value="Студент" rendered="#{loginController.student}" />
+                        </span>
+                        <p:commandButton value="Выход" action="#{loginController.logout}" icon="pi pi-sign-out" styleClass="logout-button" />
+                    </h:panelGroup>
+                    <p:button value="Вход" outcome="login" icon="pi pi-sign-in" rendered="#{not loginController.authenticated}" />
+                </f:facet>
+            </p:menubar>
+        </h:form>
+    </div>
+    
+    <div id="content" class="container">
+        <h1><ui:insert name="pageTitle">Заголовок страницы</ui:insert></h1>
+        <p:messages id="messages" showDetail="true" closable="true">
+            <p:autoUpdate />
+        </p:messages>
+        <ui:insert name="content">
+            Основное содержимое страницы
+        </ui:insert>
+    </div>
+    
+    <div id="footer">
+        <div class="container">
+            <p>© 2025 Информационная система региональных представителей</p>
+        </div>
+    </div>
+</h:body>
+</html> 

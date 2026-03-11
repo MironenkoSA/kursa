@@ -1,0 +1,4 @@
+24-Dec-2025 15:47:44.074 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+24-Dec-2025 15:47:44.074 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+24-Dec-2025 15:47:44.074 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@4eb5cdae')
+24-Dec-2025 15:48:01.468 INFO [http-nio-8080-exec-9] org.apache.catalina.core.ApplicationContext.log org.kursach.kursach.security.LoginServlet: Не удалось выполнить контейнерную аутентификацию: Login failed

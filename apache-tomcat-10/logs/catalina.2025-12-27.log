@@ -1,0 +1,9 @@
+27-Dec-2025 13:22:53.245 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+27-Dec-2025 13:22:53.261 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+27-Dec-2025 13:22:53.496 INFO [Thread-1] org.kursach.kursach.config.AppLifecycleListener.contextDestroyed ============================================
+27-Dec-2025 13:22:53.497 INFO [Thread-1] org.kursach.kursach.config.AppLifecycleListener.contextDestroyed Приложение формирования учебных планов остановлено
+27-Dec-2025 13:22:53.498 INFO [Thread-1] org.kursach.kursach.config.AppLifecycleListener.contextDestroyed ============================================
+27-Dec-2025 13:22:53.602 INFO [Thread-1] org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PoolState.stop HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/kursach_stas]
+27-Dec-2025 13:22:53.655 WARNING [Thread-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [kursach] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+27-Dec-2025 13:22:53.759 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+27-Dec-2025 13:22:53.821 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
